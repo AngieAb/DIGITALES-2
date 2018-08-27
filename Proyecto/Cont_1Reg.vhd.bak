@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Cont_1Reg is
+port (reset, clock, load, enable: in std_logic;
+			S: Out std_logic);
+end Cont_1Reg;
+
+architecture sol of Cont_1Reg is
+signal a: std_logic_vector(7 downto 0);
+begin
+process(clock,reset) is
+begin
+
+if reset ='0' then a<="00000000"; S<='0';
+ elsif (clock'event and clock='1') then
+	if load='1' then
+	a<="00000000"; s<='0'; 
+	else
+	  if enable='1' then
+	    if a="00000001" then s<='1';
+		 elsif a="11001000" then a<="00000000";
+	    else a<=a+"001"; s<='0';
+	    end if;
+		else a<="000"; s<='0';
+	  end if;
+	end if;
+end if;
+end process;
+end sol;

@@ -1,0 +1,18 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Reg_Puntajes is 
+
+Port(Clock,Reset,Enable,Load : 	IN std_logic;
+	A0 : In std_logic_vector (5 downto 0);
+	A1 : In std_logic_vector (3 downto 0);
+	S0,S1,S2,S3,S4,S5,S6,S7,S8,S9: Out std_logic_vector (5 downto 0);
+	dir : Out std_logic_vector (3 downto 0);
+	Reg_p : out std_logic);
+End Reg_Puntajes;
+
+Architecture sol of Reg_Puntajes is 
+Begin 
+end sol;

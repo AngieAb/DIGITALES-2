@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Acu_Puntos is 
+
+Port(Clock,Reset,Enable,Load : 	IN std_logic;
+	A0,A1: In std_logic_vector (4 downto 0);
+	T_pts: Out std_logic_vector (4 downto 0));
+End Acu_Puntos;
+
+Architecture sol of Acu_Puntos is 
+Begin 
+end sol;

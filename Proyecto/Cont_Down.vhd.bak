@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Cont_Down is 
+
+Port(Clock,Reset,Enable,Load : 	IN std_logic;
+	A0,A1: In std_logic_vector (1 downto 0);
+	Oport: Out std_logic_vector (1 downto 0));
+End Cont_Down;
+
+Architecture sol of Cont_Down is 
+Begin 
+end sol;

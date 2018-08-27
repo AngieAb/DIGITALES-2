@@ -1,0 +1,12 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+Entity Fin_Juego is
+	Port ( A,B: in STD_LOGIC_VECTOR(3 downto 0);
+		    Fin : OUT STD_LOGIC);
+end Fin_Juego;
+
+Architecture sol of Fin_Juego is
+Begin
+end sol;

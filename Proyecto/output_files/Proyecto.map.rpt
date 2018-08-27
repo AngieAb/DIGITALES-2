@@ -1,0 +1,682 @@
+Analysis & Synthesis report for Proyecto
+Thu Aug 23 13:27:00 2018
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis IP Cores Summary
+  9. State Machine - |Proyecto|Controlador:inst|y
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: lpm_constant2:inst14|lpm_constant:LPM_CONSTANT_component
+ 15. Parameter Settings for User Entity Instance: lpm_constant1:inst3|lpm_constant:LPM_CONSTANT_component
+ 16. Parameter Settings for User Entity Instance: Bin_BCD:inst26
+ 17. Parameter Settings for User Entity Instance: lpm_constant0:inst35|lpm_constant:LPM_CONSTANT_component
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Aug 23 13:27:00 2018       ;
+; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Full Version ;
+; Revision Name                      ; Proyecto                                    ;
+; Top-level Entity Name              ; Proyecto                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 598                                         ;
+;     Total combinational functions  ; 552                                         ;
+;     Dedicated logic registers      ; 279                                         ;
+; Total registers                    ; 279                                         ;
+; Total pins                         ; 64                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE22F17C6       ;                    ;
+; Top-level entity name                                                      ; Proyecto           ; Proyecto           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                              ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+; lpm_constant2.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/lpm_constant2.vhd ;         ;
+; lpm_constant1.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/lpm_constant1.vhd ;         ;
+; Proyecto.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Proyecto.bdf      ;         ;
+; Controlador.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Controlador.vhd   ;         ;
+; Gen_aleatorio.vhd                ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Gen_aleatorio.vhd ;         ;
+; Reg_aleatorio.vhd                ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Reg_aleatorio.vhd ;         ;
+; Hay_3Leds.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Hay_3Leds.vhd     ;         ;
+; Reg_Color.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Reg_Color.vhd     ;         ;
+; Aciertos.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Aciertos.vhd      ;         ;
+; Puntaje.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Puntaje.vhd       ;         ;
+; Acu_Puntos.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Acu_Puntos.vhd    ;         ;
+; Comparador.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Comparador.vhd    ;         ;
+; lpm_constant0.vhd                ; yes             ; User Wizard-Generated File         ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/lpm_constant0.vhd ;         ;
+; Cont_Down.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_Down.vhd     ;         ;
+; Cont_Up.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_Up.vhd       ;         ;
+; Fin_Juego.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Fin_Juego.vhd     ;         ;
+; Reg_Puntajes.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Reg_Puntajes.vhd  ;         ;
+; Mux_10a1.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Mux_10a1.vhd      ;         ;
+; Cont_Mux.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_Mux.vhd      ;         ;
+; Mux_2a1.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Mux_2a1.vhd       ;         ;
+; Bin_BCD.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Bin_BCD.vhd       ;         ;
+; BCD_7seg.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/BCD_7seg.vhd      ;         ;
+; Bin_Dec.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Bin_Dec.vhd       ;         ;
+; Mux_3a1.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Mux_3a1.vhd       ;         ;
+; ANTIREBOTE.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/ANTIREBOTE.vhd    ;         ;
+; CLOCK_DIV_50.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/CLOCK_DIV_50.vhd  ;         ;
+; Cont_1seg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_1seg.vhd     ;         ;
+; Cont_2seg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_2seg.vhd     ;         ;
+; Cont_3seg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_3seg.vhd     ;         ;
+; Cont_4seg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_4seg.vhd     ;         ;
+; Cont_7seg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_7seg.vhd     ;         ;
+; Cont_1Reg.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/Cont_1Reg.vhd     ;         ;
+; lpm_constant.tdf                 ; yes             ; Megafunction                       ; c:/altera/13.0/quartus/libraries/megafunctions/lpm_constant.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                   ;
++---------------------------------------------+---------------------------------+
+; Resource                                    ; Usage                           ;
++---------------------------------------------+---------------------------------+
+; Estimated Total logic elements              ; 598                             ;
+;                                             ;                                 ;
+; Total combinational functions               ; 552                             ;
+; Logic element usage by number of LUT inputs ;                                 ;
+;     -- 4 input functions                    ; 275                             ;
+;     -- 3 input functions                    ; 168                             ;
+;     -- <=2 input functions                  ; 109                             ;
+;                                             ;                                 ;
+; Logic elements by mode                      ;                                 ;
+;     -- normal mode                          ; 463                             ;
+;     -- arithmetic mode                      ; 89                              ;
+;                                             ;                                 ;
+; Total registers                             ; 279                             ;
+;     -- Dedicated logic registers            ; 279                             ;
+;     -- I/O registers                        ; 0                               ;
+;                                             ;                                 ;
+; I/O pins                                    ; 64                              ;
+; Embedded Multiplier 9-bit elements          ; 0                               ;
+; Maximum fan-out node                        ; ANTIREBOTE:inst19|PB_SIN_REBOTE ;
+; Maximum fan-out                             ; 205                             ;
+; Total fan-out                               ; 2937                            ;
+; Average fan-out                             ; 3.06                            ;
++---------------------------------------------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+; |Proyecto                  ; 552 (1)           ; 279 (0)      ; 0           ; 0            ; 0       ; 0         ; 64   ; 0            ; |Proyecto                      ;              ;
+;    |ANTIREBOTE:inst11|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst11    ;              ;
+;    |ANTIREBOTE:inst12|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst12    ;              ;
+;    |ANTIREBOTE:inst15|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst15    ;              ;
+;    |ANTIREBOTE:inst19|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst19    ;              ;
+;    |ANTIREBOTE:inst21|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst21    ;              ;
+;    |ANTIREBOTE:inst23|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst23    ;              ;
+;    |ANTIREBOTE:inst27|     ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst27    ;              ;
+;    |ANTIREBOTE:inst8|      ; 2 (2)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|ANTIREBOTE:inst8     ;              ;
+;    |Aciertos:inst9|        ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Aciertos:inst9       ;              ;
+;    |Acu_Puntos:inst18|     ; 7 (7)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Acu_Puntos:inst18    ;              ;
+;    |BCD_7seg:inst24|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|BCD_7seg:inst24      ;              ;
+;    |BCD_7seg:inst25|       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|BCD_7seg:inst25      ;              ;
+;    |Bin_BCD:inst26|        ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Bin_BCD:inst26       ;              ;
+;    |Bin_Dec:inst42|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Bin_Dec:inst42       ;              ;
+;    |CLOCK_DIV_50:inst28|   ; 33 (33)           ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|CLOCK_DIV_50:inst28  ;              ;
+;    |Comparador:inst20|     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Comparador:inst20    ;              ;
+;    |Cont_1Reg:inst30|      ; 11 (11)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_1Reg:inst30     ;              ;
+;    |Cont_1seg:inst17|      ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_1seg:inst17     ;              ;
+;    |Cont_2seg:inst32|      ; 10 (10)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_2seg:inst32     ;              ;
+;    |Cont_3seg:inst33|      ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_3seg:inst33     ;              ;
+;    |Cont_4seg:inst34|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_4seg:inst34     ;              ;
+;    |Cont_7seg:inst36|      ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_7seg:inst36     ;              ;
+;    |Cont_Down:inst43|      ; 13 (13)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_Down:inst43     ;              ;
+;    |Cont_Mux:inst2|        ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_Mux:inst2       ;              ;
+;    |Cont_Up:inst16|        ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Cont_Up:inst16       ;              ;
+;    |Controlador:inst|      ; 70 (70)           ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Controlador:inst     ;              ;
+;    |Gen_aleatorio:inst13|  ; 32 (32)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Gen_aleatorio:inst13 ;              ;
+;    |Hay_3Leds:inst4|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Hay_3Leds:inst4      ;              ;
+;    |Mux_2a1:inst100|       ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Mux_2a1:inst100      ;              ;
+;    |Mux_2a1:inst39|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Mux_2a1:inst39       ;              ;
+;    |Mux_2a1:inst40|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Mux_2a1:inst40       ;              ;
+;    |Mux_2a1:inst41|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Mux_2a1:inst41       ;              ;
+;    |Mux_3a1:inst1|         ; 50 (50)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Mux_3a1:inst1        ;              ;
+;    |Puntaje:inst10|        ; 19 (19)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Puntaje:inst10       ;              ;
+;    |Reg_Color:inst7|       ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Reg_Color:inst7      ;              ;
+;    |Reg_Puntajes:inst5|    ; 173 (173)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Reg_Puntajes:inst5   ;              ;
+;    |Reg_aleatorio:inst38|  ; 20 (20)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Proyecto|Reg_aleatorio:inst38 ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                            ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File                                                 ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------+
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |Proyecto|lpm_constant1:inst3  ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/lpm_constant1.vhd ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |Proyecto|lpm_constant2:inst14 ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/lpm_constant2.vhd ;
+; Altera ; LPM_CONSTANT ; 13.0    ; N/A          ; N/A          ; |Proyecto|lpm_constant0:inst35 ; C:/Users/Oscar/Desktop/simulacion1.2/Proyecto/lpm_constant0.vhd ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------------------------------------------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Proyecto|Controlador:inst|y                                                                                                                                                                                                          ;
++---------+-------+-------+-------+-------+-------+---------+-------+-------+-------+-------+---------+-------+-------+-------+-------+-------+---------+-------+-------+-------+------+------+--------+------+------+------+------+------+------+------+
+; Name    ; y.t26 ; y.t25 ; y.t24 ; y.t23 ; y.t22 ; y.t21_1 ; y.t21 ; y.t20 ; y.t19 ; y.t18 ; y.t17_1 ; y.t17 ; y.t16 ; y.t15 ; y.t14 ; y.t13 ; y.t12_1 ; y.t12 ; y.t11 ; y.t10 ; y.t9 ; y.t8 ; y.t7_1 ; y.t7 ; y.t6 ; y.t5 ; y.t4 ; y.t3 ; y.t2 ; y.t1 ;
++---------+-------+-------+-------+-------+-------+---------+-------+-------+-------+-------+---------+-------+-------+-------+-------+-------+---------+-------+-------+-------+------+------+--------+------+------+------+------+------+------+------+
+; y.t1    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ;
+; y.t2    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ; 1    ;
+; y.t3    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 1    ; 0    ; 1    ;
+; y.t4    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 1    ; 0    ; 0    ; 1    ;
+; y.t5    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 1    ; 0    ; 0    ; 0    ; 1    ;
+; y.t6    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 1    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t7    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 1    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t7_1  ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 1      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t8    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 1    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t9    ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 1    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t10   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 1     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t11   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 1     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t12   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 1     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t12_1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 1       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t13   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 1     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t14   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 1     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t15   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 1     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t16   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 1     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t17   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 1     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t17_1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 1       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t18   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 1     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t19   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 1     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t20   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 1     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t21   ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 1     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t21_1 ; 0     ; 0     ; 0     ; 0     ; 0     ; 1       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t22   ; 0     ; 0     ; 0     ; 0     ; 1     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t23   ; 0     ; 0     ; 0     ; 1     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t24   ; 0     ; 0     ; 1     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t25   ; 0     ; 1     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
+; y.t26   ; 1     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0     ; 0     ; 0       ; 0     ; 0     ; 0     ; 0    ; 0    ; 0      ; 0    ; 0    ; 0    ; 0    ; 0    ; 0    ; 1    ;
++---------+-------+-------+-------+-------+-------+---------+-------+-------+-------+-------+---------+-------+-------+-------+-------+-------+---------+-------+-------+-------+------+------+--------+------+------+------+------+------+------+------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; Cont_3seg:inst33|a[2]                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 279   ;
+; Number of registers using Synchronous Clear  ; 89    ;
+; Number of registers using Synchronous Load   ; 5     ;
+; Number of registers using Asynchronous Clear ; 204   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 150   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; Cont_Down:inst43|cont[0]               ; 3       ;
+; Cont_Down:inst43|cont[1]               ; 4       ;
+; Total number of inverted registers = 2 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Proyecto|Reg_Color:inst7|Q1[1]          ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |Proyecto|Reg_aleatorio:inst38|S0[2]     ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Proyecto|Acu_Puntos:inst18|Q1[5]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Proyecto|Cont_Up:inst16|a[1]            ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Proyecto|Cont_Up:inst16|m               ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Proyecto|Cont_7seg:inst36|a[0]          ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Proyecto|Cont_Mux:inst2|a[3]            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Proyecto|Cont_4seg:inst34|a[2]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Proyecto|Cont_2seg:inst32|a[0]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Proyecto|Cont_3seg:inst33|a[0]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Proyecto|Cont_1seg:inst17|a[2]          ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S0[4]       ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Proyecto|Gen_aleatorio:inst13|S3[0]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Proyecto|Gen_aleatorio:inst13|S4[0]     ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |Proyecto|Gen_aleatorio:inst13|Cont_i[2] ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Proyecto|Gen_aleatorio:inst13|S1[2]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Proyecto|Gen_aleatorio:inst13|S2[0]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Proyecto|Gen_aleatorio:inst13|So[0]     ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Proyecto|Cont_Down:inst43|cont[2]       ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |Proyecto|Cont_1Reg:inst30|a[1]          ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Proyecto|Puntaje:inst10|Q1[5]           ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S1[0]       ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S3[4]       ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S2[4]       ;
+; 8:1                ; 6 bits    ; 30 LEs        ; 12 LEs               ; 18 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S4[1]       ;
+; 9:1                ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S5[2]       ;
+; 10:1               ; 6 bits    ; 36 LEs        ; 12 LEs               ; 24 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S6[0]       ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 12 LEs               ; 30 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S7[1]       ;
+; 13:1               ; 4 bits    ; 32 LEs        ; 28 LEs               ; 4 LEs                  ; Yes        ; |Proyecto|Reg_Puntajes:inst5|cont[3]     ;
+; 12:1               ; 6 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S8[3]       ;
+; 13:1               ; 6 bits    ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; Yes        ; |Proyecto|Reg_Puntajes:inst5|S9[4]       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |Proyecto|Cont_Down:inst43|cont[0]       ;
+; 18:1               ; 6 bits    ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; No         ; |Proyecto|Mux_3a1:inst1|B[1]             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant2:inst14|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+---------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                          ;
++--------------------+------------------+---------------------------------------------------------------+
+; LPM_WIDTH          ; 6                ; Signed Integer                                                ;
+; LPM_CVALUE         ; 12               ; Signed Integer                                                ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
+; CBXI_PARAMETER     ; lpm_constant_bh6 ; Untyped                                                       ;
++--------------------+------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant1:inst3|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+--------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                         ;
++--------------------+------------------+--------------------------------------------------------------+
+; LPM_WIDTH          ; 6                ; Signed Integer                                               ;
+; LPM_CVALUE         ; 3                ; Signed Integer                                               ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                      ;
+; CBXI_PARAMETER     ; lpm_constant_rf6 ; Untyped                                                      ;
++--------------------+------------------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Bin_BCD:inst26 ;
++----------------+-------+------------------------------------+
+; Parameter Name ; Value ; Type                               ;
++----------------+-------+------------------------------------+
+; nbits          ; 6     ; Signed Integer                     ;
+; nsalida        ; 8     ; Signed Integer                     ;
++----------------+-------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: lpm_constant0:inst35|lpm_constant:LPM_CONSTANT_component ;
++--------------------+------------------+---------------------------------------------------------------+
+; Parameter Name     ; Value            ; Type                                                          ;
++--------------------+------------------+---------------------------------------------------------------+
+; LPM_WIDTH          ; 5                ; Signed Integer                                                ;
+; LPM_CVALUE         ; 0                ; Signed Integer                                                ;
+; ENABLE_RUNTIME_MOD ; NO               ; Untyped                                                       ;
+; CBXI_PARAMETER     ; lpm_constant_nf6 ; Untyped                                                       ;
++--------------------+------------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Full Version
+    Info: Processing started: Thu Aug 23 13:26:39 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Proyecto -c Proyecto
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant2.vhd
+    Info (12022): Found design unit 1: lpm_constant2-SYN
+    Info (12023): Found entity 1: lpm_constant2
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant1.vhd
+    Info (12022): Found design unit 1: lpm_constant1-SYN
+    Info (12023): Found entity 1: lpm_constant1
+Info (12021): Found 1 design units, including 1 entities, in source file proyecto.bdf
+    Info (12023): Found entity 1: Proyecto
+Info (12021): Found 2 design units, including 1 entities, in source file controlador.vhd
+    Info (12022): Found design unit 1: Controlador-solucion
+    Info (12023): Found entity 1: Controlador
+Info (12021): Found 2 design units, including 1 entities, in source file gen_aleatorio.vhd
+    Info (12022): Found design unit 1: Gen_aleatorio-sol
+    Info (12023): Found entity 1: Gen_aleatorio
+Info (12021): Found 2 design units, including 1 entities, in source file reg_aleatorio.vhd
+    Info (12022): Found design unit 1: Reg_aleatorio-sol
+    Info (12023): Found entity 1: Reg_aleatorio
+Info (12021): Found 2 design units, including 1 entities, in source file hay_3leds.vhd
+    Info (12022): Found design unit 1: Hay_3Leds-sol
+    Info (12023): Found entity 1: Hay_3Leds
+Info (12021): Found 2 design units, including 1 entities, in source file reg_color.vhd
+    Info (12022): Found design unit 1: Reg_Color-sol
+    Info (12023): Found entity 1: Reg_Color
+Info (12021): Found 2 design units, including 1 entities, in source file aciertos.vhd
+    Info (12022): Found design unit 1: Aciertos-sol
+    Info (12023): Found entity 1: Aciertos
+Info (12021): Found 2 design units, including 1 entities, in source file puntaje.vhd
+    Info (12022): Found design unit 1: Puntaje-sol
+    Info (12023): Found entity 1: Puntaje
+Info (12021): Found 2 design units, including 1 entities, in source file acu_puntos.vhd
+    Info (12022): Found design unit 1: Acu_Puntos-sol
+    Info (12023): Found entity 1: Acu_Puntos
+Info (12021): Found 2 design units, including 1 entities, in source file comparador.vhd
+    Info (12022): Found design unit 1: Comparador-sol
+    Info (12023): Found entity 1: Comparador
+Info (12021): Found 2 design units, including 1 entities, in source file lpm_constant0.vhd
+    Info (12022): Found design unit 1: lpm_constant0-SYN
+    Info (12023): Found entity 1: lpm_constant0
+Info (12021): Found 2 design units, including 1 entities, in source file cont_down.vhd
+    Info (12022): Found design unit 1: Cont_Down-sol
+    Info (12023): Found entity 1: Cont_Down
+Info (12021): Found 2 design units, including 1 entities, in source file cont_up.vhd
+    Info (12022): Found design unit 1: Cont_Up-solucion
+    Info (12023): Found entity 1: Cont_Up
+Info (12021): Found 2 design units, including 1 entities, in source file fin_juego.vhd
+    Info (12022): Found design unit 1: Fin_Juego-sol
+    Info (12023): Found entity 1: Fin_Juego
+Info (12021): Found 2 design units, including 1 entities, in source file reg_puntajes.vhd
+    Info (12022): Found design unit 1: Reg_Puntajes-sol
+    Info (12023): Found entity 1: Reg_Puntajes
+Info (12021): Found 2 design units, including 1 entities, in source file mux_10a1.vhd
+    Info (12022): Found design unit 1: Mux_10a1-sol
+    Info (12023): Found entity 1: Mux_10a1
+Info (12021): Found 2 design units, including 1 entities, in source file cont_mux.vhd
+    Info (12022): Found design unit 1: Cont_Mux-solucion
+    Info (12023): Found entity 1: Cont_Mux
+Info (12021): Found 2 design units, including 1 entities, in source file cont_seg.vhd
+    Info (12022): Found design unit 1: Cont_seg-sol
+    Info (12023): Found entity 1: Cont_seg
+Info (12021): Found 2 design units, including 1 entities, in source file mux_2a1.vhd
+    Info (12022): Found design unit 1: Mux_2a1-sol
+    Info (12023): Found entity 1: Mux_2a1
+Info (12021): Found 2 design units, including 1 entities, in source file bin_bcd.vhd
+    Info (12022): Found design unit 1: Bin_BCD-Behavioral
+    Info (12023): Found entity 1: Bin_BCD
+Info (12021): Found 2 design units, including 1 entities, in source file bcd_7seg.vhd
+    Info (12022): Found design unit 1: BCD_7seg-solution
+    Info (12023): Found entity 1: BCD_7seg
+Info (12021): Found 2 design units, including 1 entities, in source file bin_dec.vhd
+    Info (12022): Found design unit 1: Bin_Dec-solution
+    Info (12023): Found entity 1: Bin_Dec
+Info (12021): Found 2 design units, including 1 entities, in source file ale_0a5.vhd
+    Info (12022): Found design unit 1: Ale_0a5-sol
+    Info (12023): Found entity 1: Ale_0a5
+Info (12021): Found 2 design units, including 1 entities, in source file bin_dec_led.vhd
+    Info (12022): Found design unit 1: Bin_Dec_led-solution
+    Info (12023): Found entity 1: Bin_Dec_led
+Info (12021): Found 2 design units, including 1 entities, in source file mux_3a1.vhd
+    Info (12022): Found design unit 1: Mux_3a1-sol
+    Info (12023): Found entity 1: Mux_3a1
+Info (12021): Found 2 design units, including 1 entities, in source file antirebote.vhd
+    Info (12022): Found design unit 1: ANTIREBOTE-a
+    Info (12023): Found entity 1: ANTIREBOTE
+Info (12021): Found 2 design units, including 1 entities, in source file clock_div_10_mhz.vhd
+    Info (12022): Found design unit 1: CLOCK_DIV_10_MHz-a
+    Info (12023): Found entity 1: CLOCK_DIV_10_MHz
+Info (12021): Found 2 design units, including 1 entities, in source file clock_div_50.vhd
+    Info (12022): Found design unit 1: CLOCK_DIV_50-a
+    Info (12023): Found entity 1: CLOCK_DIV_50
+Info (12021): Found 2 design units, including 1 entities, in source file cont_1seg.vhd
+    Info (12022): Found design unit 1: Cont_1seg-sol
+    Info (12023): Found entity 1: Cont_1seg
+Info (12021): Found 2 design units, including 1 entities, in source file cont_2seg.vhd
+    Info (12022): Found design unit 1: Cont_2seg-sol
+    Info (12023): Found entity 1: Cont_2seg
+Info (12021): Found 2 design units, including 1 entities, in source file cont_3seg.vhd
+    Info (12022): Found design unit 1: Cont_3seg-sol
+    Info (12023): Found entity 1: Cont_3seg
+Info (12021): Found 2 design units, including 1 entities, in source file cont_4seg.vhd
+    Info (12022): Found design unit 1: Cont_4seg-sol
+    Info (12023): Found entity 1: Cont_4seg
+Info (12021): Found 2 design units, including 1 entities, in source file cont_7seg.vhd
+    Info (12022): Found design unit 1: Cont_7seg-sol
+    Info (12023): Found entity 1: Cont_7seg
+Info (12021): Found 2 design units, including 1 entities, in source file cont_1reg.vhd
+    Info (12022): Found design unit 1: Cont_1Reg-sol
+    Info (12023): Found entity 1: Cont_1Reg
+Info (12127): Elaborating entity "Proyecto" for the top level hierarchy
+Info (12128): Elaborating entity "Controlador" for hierarchy "Controlador:inst"
+Info (12128): Elaborating entity "CLOCK_DIV_50" for hierarchy "CLOCK_DIV_50:inst28"
+Info (12128): Elaborating entity "ANTIREBOTE" for hierarchy "ANTIREBOTE:inst19"
+Info (12128): Elaborating entity "Aciertos" for hierarchy "Aciertos:inst9"
+Info (12128): Elaborating entity "Hay_3Leds" for hierarchy "Hay_3Leds:inst4"
+Info (12128): Elaborating entity "Reg_aleatorio" for hierarchy "Reg_aleatorio:inst38"
+Info (12128): Elaborating entity "Gen_aleatorio" for hierarchy "Gen_aleatorio:inst13"
+Info (12128): Elaborating entity "Reg_Color" for hierarchy "Reg_Color:inst7"
+Info (12128): Elaborating entity "Comparador" for hierarchy "Comparador:inst20"
+Info (12128): Elaborating entity "Puntaje" for hierarchy "Puntaje:inst10"
+Info (12128): Elaborating entity "lpm_constant2" for hierarchy "lpm_constant2:inst14"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant2:inst14|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant2:inst14|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant2:inst14|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "12"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "6"
+Info (12128): Elaborating entity "Cont_7seg" for hierarchy "Cont_7seg:inst36"
+Info (12128): Elaborating entity "Cont_4seg" for hierarchy "Cont_4seg:inst34"
+Info (12128): Elaborating entity "Cont_3seg" for hierarchy "Cont_3seg:inst33"
+Info (12128): Elaborating entity "Cont_2seg" for hierarchy "Cont_2seg:inst32"
+Info (12128): Elaborating entity "Cont_1seg" for hierarchy "Cont_1seg:inst17"
+Info (12128): Elaborating entity "Cont_Up" for hierarchy "Cont_Up:inst16"
+Info (12128): Elaborating entity "Reg_Puntajes" for hierarchy "Reg_Puntajes:inst5"
+Info (12128): Elaborating entity "Acu_Puntos" for hierarchy "Acu_Puntos:inst18"
+Info (12128): Elaborating entity "Fin_Juego" for hierarchy "Fin_Juego:inst31"
+Info (12128): Elaborating entity "Cont_Down" for hierarchy "Cont_Down:inst43"
+Warning (10492): VHDL Process Statement warning at Cont_Down.vhd(19): signal "A0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "lpm_constant1" for hierarchy "lpm_constant1:inst3"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant1:inst3|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant1:inst3|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant1:inst3|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "3"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "6"
+Info (12128): Elaborating entity "Cont_Mux" for hierarchy "Cont_Mux:inst2"
+Info (12128): Elaborating entity "Cont_1Reg" for hierarchy "Cont_1Reg:inst30"
+Info (12128): Elaborating entity "BCD_7seg" for hierarchy "BCD_7seg:inst24"
+Info (12128): Elaborating entity "Bin_BCD" for hierarchy "Bin_BCD:inst26"
+Info (12128): Elaborating entity "Mux_3a1" for hierarchy "Mux_3a1:inst1"
+Warning (10492): VHDL Process Statement warning at Mux_3a1.vhd(20): signal "A0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Mux_3a1.vhd(21): signal "A1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Mux_3a1.vhd(24): signal "A2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at Mux_3a1.vhd(17): inferring latch(es) for signal or variable "B", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "B[0]" at Mux_3a1.vhd(17)
+Info (10041): Inferred latch for "B[1]" at Mux_3a1.vhd(17)
+Info (10041): Inferred latch for "B[2]" at Mux_3a1.vhd(17)
+Info (10041): Inferred latch for "B[3]" at Mux_3a1.vhd(17)
+Info (10041): Inferred latch for "B[4]" at Mux_3a1.vhd(17)
+Info (10041): Inferred latch for "B[5]" at Mux_3a1.vhd(17)
+Info (12128): Elaborating entity "Mux_10a1" for hierarchy "Mux_10a1:inst22"
+Info (12128): Elaborating entity "Mux_2a1" for hierarchy "Mux_2a1:inst40"
+Warning (10492): VHDL Process Statement warning at Mux_2a1.vhd(18): signal "A0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Mux_2a1.vhd(20): signal "A1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "lpm_constant0" for hierarchy "lpm_constant0:inst35"
+Info (12128): Elaborating entity "lpm_constant" for hierarchy "lpm_constant0:inst35|lpm_constant:LPM_CONSTANT_component"
+Info (12130): Elaborated megafunction instantiation "lpm_constant0:inst35|lpm_constant:LPM_CONSTANT_component"
+Info (12133): Instantiated megafunction "lpm_constant0:inst35|lpm_constant:LPM_CONSTANT_component" with the following parameter:
+    Info (12134): Parameter "lpm_cvalue" = "0"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "LPM_CONSTANT"
+    Info (12134): Parameter "lpm_width" = "5"
+Info (12128): Elaborating entity "Bin_Dec" for hierarchy "Bin_Dec:inst42"
+Warning (14026): LATCH primitive "Mux_3a1:inst1|B[4]" is permanently enabled
+Warning (14026): LATCH primitive "Mux_3a1:inst1|B[3]" is permanently enabled
+Warning (14026): LATCH primitive "Mux_3a1:inst1|B[5]" is permanently enabled
+Warning (14026): LATCH primitive "Mux_3a1:inst1|B[2]" is permanently enabled
+Warning (14026): LATCH primitive "Mux_3a1:inst1|B[1]" is permanently enabled
+Warning (14026): LATCH primitive "Mux_3a1:inst1|B[0]" is permanently enabled
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 667 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
+    Info (21059): Implemented 55 output pins
+    Info (21061): Implemented 603 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Thu Aug 23 13:27:00 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:08
+
+

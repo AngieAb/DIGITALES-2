@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+entity Controlador is
+port ( resetn, clock, Inicio, Jugar, Consulta_T, Final, Or_Tecla, Acierto, Son_5Ac, Son_5s, Son_4s, Cont_5: in std_logic;
+		 En_ale, L_Rt, En_Rt, L_Ac, En_Ac, S_Ac, L_cnt, En_cnt, L_4seg, En_4seg, L_5seg, En_5seg, L_Pt, En_Pt, L_Ra, En_Ra, En_ContRa, En_0a5, Fin, Disp, P0, P1, P2, Press_T  : out std_logic;
+		 Estados:out std_logic_vector (3 downto 0));
+ end Controlador;
+ architecture solucion of Controlador is
+begin
+end process;
+end solucion;

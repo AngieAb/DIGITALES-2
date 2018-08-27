@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Puntaje is 
+
+Port(Clock,Reset,En_0,En_1,Load : 	IN std_logic;
+	A0: In std_logic_vector (3 downto 0);
+	Puntos: Out std_logic_vector (3 downto 0));
+End Puntaje;
+
+Architecture sol of Puntaje is 
+Begin 
+end sol;

@@ -1,0 +1,289 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "Led_p",
+					"strict" : false
+				},
+				{
+					"name" : "En_cont",
+					"strict" : false
+				},
+				{
+					"name" : "facil",
+					"strict" : false
+				},
+				{
+					"name" : "medio",
+					"strict" : false
+				},
+				{
+					"name" : "dificil",
+					"strict" : false
+				},
+				{
+					"name" : "cont[5]",
+					"strict" : false
+				},
+				{
+					"name" : "cont[4]",
+					"strict" : false
+				},
+				{
+					"name" : "cont[3]",
+					"strict" : false
+				},
+				{
+					"name" : "cont[2]",
+					"strict" : false
+				},
+				{
+					"name" : "cont[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cont[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Decenas[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Disp_Unidades[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ESTADOS[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ESTADOS[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ESTADOS[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ESTADOS[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ESTADOS[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Am[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Am[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Am[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Am[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Am[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Az[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Az[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Az[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Az[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Az[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Oport[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Oport[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_Oport[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_V[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_V[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_V[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_V[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Led_V[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Puntos[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Puntos[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Puntos[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Puntos[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Puntos[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Puntos[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Rojo",
+					"strict" : false
+				},
+				{
+					"name" : "Amarillo",
+					"strict" : false
+				},
+				{
+					"name" : "Azul",
+					"strict" : false
+				},
+				{
+					"name" : "Verde",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Consultar",
+					"strict" : false
+				},
+				{
+					"name" : "Jugar",
+					"strict" : false
+				},
+				{
+					"name" : "Start",
+					"strict" : false
+				},
+				{
+					"name" : "Clock_1s",
+					"strict" : false
+				},
+				{
+					"name" : "Clock_100k",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

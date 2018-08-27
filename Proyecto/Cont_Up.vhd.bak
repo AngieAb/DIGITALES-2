@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+entity Cont_Up is
+port (Clock,Reset,enable,load: in std_logic;
+		Nivel: out std_logic_vector(1 downto 0);
+		Facil, Medio, Dificil: in std_logic);
+end Cont_Up;
+architecture solucion of Cont_Up is
+signal a: std_logic_vector(1 downto 0);
+signal f,m,d: std_logic;
+begin
+process(clock,reset) is
+begin
+if reset ='0' then
+	a<="00";
+	elsif clock'event and clock='1' then
+	if load='1' then
+	a<="00";
+	else
+	if a="00" then f<='1'; end if;
+	if a="01" then m<='1'; end if;
+	if a="10" then d<='1'; end if;
+	if enable='1' then a<=a+"0001";end if;
+	end if;
+end if;
+
+end process;
+Q<=a;
+Facil<=f; Medio<=m; Dificil<=d;
+end solucion;

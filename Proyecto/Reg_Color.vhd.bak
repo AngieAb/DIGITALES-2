@@ -1,0 +1,15 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Reg_Color is 
+
+Port(Clock,Reset,Enable,Load : 	IN std_logic;
+	Colores   : In std_logic_vector (3 downto 0);
+	S: Out std_logic_vector (3 downto 0));
+End Reg_Color;
+
+Architecture sol of Reg_Color is 
+Begin 
+end sol;

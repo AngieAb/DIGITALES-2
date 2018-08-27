@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_unsigned.all; 
+
+Entity Cont_seg is 
+
+Port(Clock,Reset,Enable,Load : 	IN std_logic;
+	   S0,S1,S2,S3: Out std_logic);
+End Cont_seg;
+
+Architecture sol of Cont_seg is 
+Begin 
+end sol;
